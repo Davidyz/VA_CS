@@ -5,4 +5,6 @@ Content:
   * Complexity analysis (big-O, big-Ω and big-Θ notations);
   * Graph theory;
   * Depth-First Search Algoritm;
+  * Heaps;
+  * Bredth-First Search Algotithm;
   * To be continued.
