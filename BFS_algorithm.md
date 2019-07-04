@@ -12,7 +12,7 @@ _ω(E)_: a function that denotes the weight of the edge _E_.
 
 The weight of a path, p = {v₀, v₁, v₂, .....} is: `∑ω(Ei)`.
 
-### SHortest Path:
+### Shortest Path:
 The path with smallest possible weitht, denoted by _δ(u, v)_.  
 If a vertex, _v_ is unreachable from another vertex, _u_, _δ(u, v)_ = ∞.
 
