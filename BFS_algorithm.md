@@ -34,3 +34,22 @@ _T(n)_ = _O(|V| + |E|)_
 _O(|V|)_ because every vertex will at most be examined once.  
 _O(|E|)_ because an edge, _(u, v)_, will only be examed once u is dequeued, and the edge will only be examined once (in a directed graph) or twice (in an undirected graph).  
 
+# Dijkstra's Algorithm
+**Input**: _V_, _E_, _ω_, _s_ where _ω_ denotes the non-negative weights and _s_ is the source vertex.  
+Running time: _O((|V| + |E|)logV)_  
+
+    ∀ v ∈ V:
+      d[v] = ∞
+      π[v] = NIL
+    
+    d[s] = 0
+    Q = MakeQueue(v) <==> MakeMinHeap()   // use d[v] as keys.
+
+    while Q ≠ Ø:
+      u = Extract_Min(Q)
+      ∀ v ∈ sorted(Adj[u], d):   // Adj[u] is sorted according to their shortest distance to s.
+        if d[u] + ω(u, v) < d[v]:
+          d[v] = d[u] + ω(u, v)
+          π[v] = u
+          Decrease-Key(v, d[v])
+        Enqueue(Q, v)
